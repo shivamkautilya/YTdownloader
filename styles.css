@@ -1,0 +1,254 @@
+/* 
+#EBECF0
+#5E17EB
+  primary color:  #5b87ce; 
+  heading color: #363636;
+  paragraph color: #4a4a4a;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Montserrat:ital,wght@0,700;1,500&family=Roboto:wght@500;700&display=swap");
+/* 
+  IMPORTED FONTS
+  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+*/
+body {
+  background-color: #fff;
+  font-size: 10px;
+  max-width: 192.4em;
+  width: 99vw;
+  margin: 0 auto;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* breadcrumb link  */
+.breadcrumb-nav {
+  padding: 2em 1em 0.5em 1em;
+  font-size: 1.6em;
+  background-color: #fff;
+}
+.breadcrumb-nav--link {
+  color: #5e17eb;
+}
+/* navigation bar  */
+.nav-link {
+  max-width: 192.4em;
+  /* width: 96vw; */
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.6em;
+}
+.logo-title {
+  font-weight: 500;
+  font-size: 2.8em;
+}
+.logo-link {
+  text-decoration: none;
+  color: #5e17eb;
+}
+
+.logo-link:hover,
+.nav-link:hover {
+  text-decoration: none;
+  color: #5e17eb;
+}
+.logo-partial {
+  color: #4a4a4a;
+}
+
+.logo-partial:hover {
+  color: #5e17eb;
+  transition: 0.4s;
+}
+/* main header  */
+.main-header {
+  background-color: #2e70da;
+  width: 100%;
+}
+.main-container {
+  padding: 5em;
+  text-align: center;
+  color: #ebecf0;
+  font-family: "Inter", sans-serif;
+}
+/* download link video - BETA  */
+.url--box {
+  /* background-color: aqua; */
+}
+.url--input {
+  background-color: #fff;
+  border: none;
+  color: #363636;
+  border: 0.2em solid #4183ed;
+  padding: 0.4em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4em;
+  margin: 0.4em 0.2em;
+  transition-duration: 0.4s;
+  font-family: "Inter", sans-serif;
+  width: 25vw;
+}
+.url--button,
+.btnDesign {
+  background-color: #fff;
+  border: none;
+  color: #363636;
+  border: 0.2em solid #4183ed;
+  padding: 0.4em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4em;
+  margin: 0.4em 0.2em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+.url--button:hover {
+  background-color: #4183ed;
+  color: #ebecf0;
+}
+#loadingText {
+  visibility: hidden;
+}
+#loadingContent {
+  visibility: hidden;
+}
+.loading-para {
+  color: #ebecf0 !important;
+}
+.btnDesign {
+}
+/* 
+
+ */
+/* TESTING - ENDS HERE  */
+.main-container--heading,
+.main-container--paragraph {
+  background: #ebecf0;
+  background: linear-gradient(to bottom, #ebecf0 54%, #2e70da 97%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-container--heading {
+  font-size: 4.2em;
+}
+.main-container--paragraph {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: #ebecf0;
+  font-size: 2em;
+}
+
+/* main header styles ends here  */
+
+.container {
+  margin: 0 auto;
+  padding: 3em;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+.heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #363636;
+}
+.paragraph {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1.6em;
+  color: #4a4a4a;
+  margin: 0;
+}
+.arrow-list {
+  list-style-type: none;
+}
+.arrow-list::before {
+  content: url(./img/arrow.png);
+  height: 1.6em;
+}
+
+.example-link {
+  font-size: 1.4em;
+  color: #5b87ce;
+}
+
+.example-link > span {
+  color: #4a4a4a;
+  font-weight: 400;
+}
+
+.footer {
+  border-top: 1px solid rgba(10, 10, 10, 0.159);
+}
+
+.copyright-txt {
+  text-align: center;
+  padding: 1.5em;
+}
+
+.copyright-txt > a {
+  text-decoration: none;
+  color: #5b87ce;
+}
+
+.copyright-txt > a:hover {
+  text-decoration: underline;
+  transition: 0.6s;
+  color: #5e17eb;
+}
+
+@media only screen and (max-width: 600px) {
+  .url--button,
+  .url--input,
+  .btnDesign {
+    width: 75vw;
+    padding: 0.2em 1.2em;
+  }
+  body {
+    width: 98vw;
+  }
+  .main-container--heading,
+  .main-container--paragraph {
+    background: #ebecf0;
+    background: radial-gradient(
+      ellipse farthest-side at center center,
+      #ebecf0 20%,
+      #2e70da 170%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .container {
+    padding: 1em;
+  }
+  .breadcrumb-nav {
+    padding-top: 1em;
+    padding-left: 0.25em;
+    padding: 1em 0.25em 0.5em 0.25em;
+    font-size: 1.3em;
+  }
+  .paragraph {
+    font-size: 1.4em;
+  }
+  .main-container--heading {
+    font-size: 3.4em;
+  }
+  .main-container--paragraph {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: #ebecf0;
+    font-size: 1.6em;
+  }
+  .footer {
+    padding-bottom: 6.5em;
+  }
+}

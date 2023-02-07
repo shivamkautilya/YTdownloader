@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./img/pinterest saves - logo.png"
+      type="image/x-icon"
+    />
+
+    <title>PinterestSaves - Download Pinterest videos and Images</title>
+    <!-- bootsrap link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+   <!-- custom css link  -->
+   
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./sharelink.css">
+    
+  </head>
+  <body>
+    <!-- NAVIGATON BAR  -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand logo-title logo-link" title="Pinterest Saves"  href="href=./index.html">Pinterest<span class="logo-partial">Saves</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">           
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="./terms-conditons.html">Terms & Conditions</a>
+            <a class="nav-link" href="./privacy-policy.html">Privacy Policy</a>
+          </div>
+         </div>
+      </div>
+    </nav>
+    <!-- share buttons  -->
+    <div class="share-btn-container">
+      <a href="https://wa.me/?text=PinterestSaves-Download Pinterest Videos https://pinterestsaves.com/" class="whatsapp-btn">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </a>
+      <a href="https://www.facebook.com/sharer.php?u=https://pinterestsaves.com/" class="facebook-btn">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+
+      <a href="https://twitter.com/share?url=https://pinterestsaves.com/&text=PinterestSaves-Download Pinterest Videos" class="twitter-btn">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+
+      <a href="https://pinterest.com/pin/create/bookmarklet/?url=https://pinterestsaves.com/&description=PinterestSaves-Download_Pinterest_Videos" class="pinterest-btn">
+        <ion-icon name="logo-pinterest"></ion-icon>
+      </a>
+    </div>
+
+    <!-- MAIN HEADER FOR DOWNLOADING VIDEO  -->
+    <header class="main-header">
+      <div class="main-container">
+        <h1 class="main-container--heading">Download Pinterest Video</h1>
+        <p class="main-container--paragraph">Full HD Video. Fast. All devices</p>
+        <!-- <div class="search-box">
+          <form action="/" name="urlForm" id="formUrl" method="post">
+            <input type="text" placeholder="Enter Pinterest's link">
+            <input type="submit" value="Download">
+          </form>
+        </div> -->
+        <!-- new form for download link - BETA  -->
+        <div id="form" class="url--box">
+          <input id="inputUrl" type="url" placeholder="Enter Pinterest link" class="url--input">
+          <input id="downloadBtn" onclick="openbox()" type="submit" value="Download" class="url--button">
+       </div>
+       <div class="loading" id="loadingContent">
+        <p class="paragraph loading-para">Downloading, Please Wait...</p>
+       </div>
+       <div class="loading" id="loadingText">
+        <p class="paragraph loading-para">Downloading, Please Wait...</p>
+       </div>
+       
+     <!--  -->
+     <!-- <div id="form">
+      <input id="inputUrl" type="url" placeholder="Enter URL">
+      <input id="downloadBtn" onclick="openbox()" type="submit" value="Download">
+   </div>
+     <div id="loading">
+         <p> Downloading <span id="dots">...</span></p>
+      </div> -->
+     <div id="container">
+     
+      <div id="thumb"></div>
+      <div id="title"></div>
+      <div id="description"></div>
+      <div id="uploader"></div>
+      <div id="duration"></div>
+      <div id="extractor"></div>
+      <div id="downloadURL"></div>
+      <div id="download"></div>
+   </div>
+        <!-- BETA ENDS HERE  -->
+      </div>
+    </header>
+    <section id="about">
+      <div class="container">
+        <!-- about  -->
+        <h4 class="heading">Download Pinterest Videos</h4>
+        <ul>
+          <li class="paragraph arrow-list">
+            DotSave is best download Video Pinterest and Photo Pinterest
+            website/tool.
+          </li>
+          <li class="paragraph arrow-list">
+            It works for computers, tablets and mobile devices.
+          </li>
+          <li class="paragraph arrow-list">Download Pinterest Video of Original Size</li>
+        </ul>
+        <!-- features  -->
+        <h4 class="heading">Features</h4>
+        <ul>
+          <li class="paragraph arrow-list">
+            Download Pinterest Video with FullHD, 720p, 320p ..
+          </li>
+          <li class="paragraph arrow-list">
+            Download Pinterest Photo with Original Size, Large, Medium,
+            Thumbnail size ...
+          </li>
+          <li class="paragraph arrow-list">
+            Download Pinterest Video without installing anythings
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- HOW TO SECTION  -->
+    <section id="howto">
+      <div class="container">
+        <h4 class="heading">How to Download Pinterest Video?</h4>
+        <ul>
+          <li class="paragraph arrow-list">
+            Open Pinterest app on your phone/or Web on your browser.
+          </li>
+          <li class="paragraph arrow-list">Choose whatever video you want to download.</li>
+          <li class="paragraph arrow-list">
+            Click to the Share button at the right bottom.
+          </li>
+        </ul>
+        <h4 class="heading">How to get the Pinterest video download link?</h4>
+        <ul>
+          <li class="paragraph arrow-list">&#160;Open your Pinterest application</li>
+          <li class="paragraph arrow-list">
+            Choose the Pinterest video or photo that you want to download
+          </li>
+          <li class="paragraph arrow-list">
+            Click Share and at the Share options, find Copy Link button
+          </li>
+          <li class="paragraph arrow-list">
+            Your download URL is ready on the clipboard.
+          </li>
+        </ul>
+        <div class="example">
+          <p class="paragraph" style="font-weight: 500">
+            For example, the link would look like this:
+          </p>
+          <p class="paragraph example-link">
+            https://www.pinterest.com/pin/847248660909367/ <br />
+            <span> or </span> https://pin.it/1f1G2x0
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="paragraph copyright-txt">© 2023 <a href="./index.html" title="dotsave">pinterestsaves.com</a>
+         , All rights reserved. | <a href="./terms-conditons.html" rel="nofollow noopener">Terms &amp;  Conditons</a>
+        | <a href="./privacy-policy.html" rel="nofollow noopener">Privacy Policy</a>
+        </div></div>
+    </footer>
+    <!-- scripts  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+        <!-- icon link  -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- custom js links -->
+    <script src="./javascript.js"></script>
+    <script src="./sharelink.js"></script>
+  </body>
+</html>
