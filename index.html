@@ -42,7 +42,7 @@
          </div>
       </div>
     </nav>
-    <!-- share buttons  -->
+    <!-- share buttons - side  -->
     <div class="share-btn-container">
       <a href="https://wa.me/?text=YouTubeSaves-Download YouTube Videos https://YouTubesaves.com/"  target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
         <ion-icon name="logo-whatsapp"></ion-icon>
@@ -55,11 +55,12 @@
         <ion-icon name="logo-twitter"></ion-icon>
       </a>
 
-      <a href="https://YouTube.com/pin/create/bookmarklet/?url=https://YouTubesaves.com/&description=YouTubeSaves-Download_YouTube_Videos"  target="_blank" rel="noopener noreferrer" class="pinterest-btn">
-        <ion-icon name="logo-pinterest"></ion-icon>
-      </a>
+      <span class="link-btn" title="Copy website link">
+        <ion-icon name="link" onclick="copyLink()"></ion-icon>
+      </span>
     </div>
-
+    <!-- toast message when link copied  -->
+    <div id="snackbar">Website link copied to clipboard.</div>
     <!-- MAIN HEADER FOR DOWNLOADING VIDEO  -->
     <header class="main-header">
       <div class="main-container">
@@ -171,6 +172,8 @@
         </div>
       </div>
     </section>
+    
+    <!-- footer  -->
     <footer class="footer">
       <div class="paragraph copyright-txt">© 2023 <a href="./index.html" title="dotsave">YTdownloader</a>
          | <a href="./terms-conditons.html" rel="nofollow noopener">Terms &amp;  Conditons</a>
@@ -188,6 +191,17 @@
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- custom js links -->
+    <script>
+      function copyLink() {
+      /* Copy text into clipboard */
+      navigator.clipboard.writeText
+          ("YTdownloader");
+      // display toast message 
+      var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2500);
+  }
+    </script>
     <script src="./javascript.js"></script>
     <script src="./sharelink.js"></script>
   </body>
