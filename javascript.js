@@ -69,12 +69,12 @@ downloadBtn.addEventListener("click", () => {
             VTHUMB = vidThumb;
           }
           if (vidThumb) {
-            thumbV.innerHTML = "<img src='" + VTHUMB + "' width='300px'>";
+            thumbV.innerHTML = "<img src='" + VTHUMB + "' width='220px'>";
           } else {
-            thumbV.innerHTML = "<img src='logo.png' width='300px'>";
+            thumbV.innerHTML = "<img src='logo.png' width='220px'>";
           }
           if (vidTitle) {
-            titleV.innerHTML = "<h1>" + vidTitle + "</h1>";
+            titleV.innerHTML = "<h5>" + vidTitle + "</h5>";
             document.title = "Download " + vidTitle + " VKrDownloader";
           }
           if (vidDescription) {
