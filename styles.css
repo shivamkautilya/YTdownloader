@@ -243,6 +243,9 @@ body {
     color: #ebecf0;
     font-size: 1.6em;
   }
+  .footer {
+    padding-bottom: 6.5em;
+  }
 }
 
 @media only screen and (max-width: 380px) {
