@@ -123,7 +123,24 @@ downloadBtn.addEventListener("click", () => {
               let myParam =
                 " - " + getParameterByName("itag", obj.formats[i].url);
               let bgcol = "";
-              if (myParam == " - 22" || myParam == " - 18") {
+              // if (
+              //   myParam == " - 22" ||
+              //   myParam == " - 18" ||
+              //   myParam == " - 204"
+              // ) {
+              //   bgcol = "green";
+              //   downloadV.innerHTML +=
+              //     "<a href='" +
+              //     obj.formats[i].url +
+              //     "'><button style='background:" +
+              //     bgcol +
+              //     "' class='dlbtns btnDesign'>" +
+              //     obj.formats[i].quality +
+              //     myParam +
+              //     "Download Video" +
+              //     "</button></a>";
+              // }
+              if (myParam == " - 18") {
                 bgcol = "green";
                 downloadV.innerHTML +=
                   "<a href='" +
@@ -131,17 +148,20 @@ downloadBtn.addEventListener("click", () => {
                   "'><button style='background:" +
                   bgcol +
                   "' class='dlbtns btnDesign'>" +
-                  obj.formats[i].quality +
-                  myParam +
-                  "Download Video" +
+                  " 360p Download Video" +
                   "</button></a>";
               }
-              // if (myParam == " - 18") {
-              //   bgcol = "green";
-              // }
-              // if (myParam == " - 22") {
-              //   bgcol = "green";
-              // }
+              if (myParam == " - 22") {
+                bgcol = "green";
+                downloadV.innerHTML +=
+                  "<a href='" +
+                  obj.formats[i].url +
+                  "'><button style='background:" +
+                  bgcol +
+                  "' class='dlbtns btnDesign'>" +
+                  " 720p Download Video" +
+                  "</button></a>";
+              }
               if (
                 myParam == " - 17" ||
                 myParam == " - 139" ||
