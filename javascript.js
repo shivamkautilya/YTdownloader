@@ -77,7 +77,7 @@ downloadBtn.addEventListener("click", () => {
           }
           if (vidTitle) {
             titleV.innerHTML = "<h5>" + vidTitle + "</h5>";
-            document.title = "Download " + vidTitle + " VKrDownloader";
+            document.title = "Download " + vidTitle + " YTdownloader";
           }
           if (vidDescription) {
             descriptionV.innerHTML =
