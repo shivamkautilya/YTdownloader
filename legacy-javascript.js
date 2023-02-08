@@ -1,3 +1,5 @@
+// THIS CODE IS OLD VERSION CODE BEFORE CUSTOMISATION OF DOWNLOAD AUDIO AND VIDEO BUTTON
+// DATE WHEN CHANGED = 9 FEB, 2023
 //Loading
 function openbox(e) {
   e.preventDefault();
@@ -94,14 +96,14 @@ downloadBtn.addEventListener("click", () => {
           if (vidExtractor) {
             extractorV.innerHTML = "<h5>" + vidExtractor + "</h5>";
           }
-          // show open thumbnail img link & link of video - starts here
+
           if (vidUrl) {
-            // urlV.innerHTML = "";
-            // urlV.innerHTML =
-            //   "<a href='" +
-            //   vidUrl +
-            //   // "'><button class='dlbtn'>Video</button></a>"; //dsaf
-            //   "'><button class='dlbtn btnDesign'>Open Video</button></a>";
+            urlV.innerHTML = "";
+            urlV.innerHTML =
+              "<a href='" +
+              vidUrl +
+              // "'><button class='dlbtn'>Video</button></a>"; //dsaf
+              "'><button class='dlbtn btnDesign'>Open Video</button></a>";
             if (vidThumb) {
               urlV.innerHTML +=
                 "<a href='" +
@@ -110,7 +112,7 @@ downloadBtn.addEventListener("click", () => {
                 "'><button class='dlbtn btnDesign'>Download Thumbnail </button></a>";
             }
           }
-          // show open thumbnail img link & link of video -  here
+
           if (obj.entries) {
             urlV.innerHTML = "";
             urlV.innerHTML +=
@@ -119,52 +121,53 @@ downloadBtn.addEventListener("click", () => {
               "'><button class='dlbtn'>Download Video</button></a>";
           } else if (obj.formats) {
             downloadV.innerHTML = "";
-            for (var i = 1; i < obj.formats.length; i++) {
+            for (var i = 0; i < obj.formats.length; i++) {
               let myParam =
                 " - " + getParameterByName("itag", obj.formats[i].url);
               let bgcol = "";
-              if (myParam == " - 22" || myParam == " - 18") {
+              if (myParam == " - 17") {
                 bgcol = "green";
-                downloadV.innerHTML +=
-                  "<a href='" +
-                  obj.formats[i].url +
-                  "'><button style='background:" +
-                  bgcol +
-                  "' class='dlbtns btnDesign'>" +
-                  obj.formats[i].quality +
-                  myParam +
-                  "Download Video" +
-                  "</button></a>";
               }
-              // if (myParam == " - 18") {
-              //   bgcol = "green";
-              // }
-              // if (myParam == " - 22") {
-              //   bgcol = "green";
-              // }
-              if (
-                myParam == " - 17" ||
-                myParam == " - 139" ||
-                myParam == " - 140" ||
-                myParam == " - 141" ||
-                myParam == " - 249" ||
-                myParam == " - 250" ||
-                myParam == " - 251" ||
-                myParam == " - 599" ||
-                myParam == " - 600"
-              ) {
-                bgcol = "#1269ff";
-                downloadV.innerHTML +=
-                  "<a href='" +
-                  obj.formats[i].url +
-                  "'><button style='background:" +
-                  bgcol +
-                  "' class='dlbtns btnDesign'>" +
-                  obj.formats[i].quality +
-                  myParam +
-                  "Download Audio" +
-                  "</button></a>";
+              if (myParam == " - 18") {
+                bgcol = "green";
               }
+              if (myParam == " - 22") {
+                bgcol = "green";
+              }
+              if (myParam == " - 139") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 140") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 141") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 249") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 250") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 251") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 599") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 600") {
+                bgcol = "#3800ff";
+              }
+              downloadV.innerHTML +=
+                "<a href='" +
+                obj.formats[i].url +
+                "'><button style='background:" +
+                bgcol +
+                "' class='dlbtns btnDesign'>" +
+                obj.formats[i].quality +
+                myParam +
+                "Download Video" +
+                "</button></a>";
             }
           } else if (obj.medias) {
             downloadV.innerHTML = "";
@@ -172,48 +175,49 @@ downloadBtn.addEventListener("click", () => {
               let myParam =
                 " - " + getParameterByName("itag", obj.medias[i].url);
               let bgcol = "";
-              if (myParam == " - 22" || myParam == " - 18") {
+              if (myParam == " - 17") {
                 bgcol = "green";
-                downloadV.innerHTML +=
-                  "<a href='" +
-                  obj.formats[i].url +
-                  "'><button style='background:" +
-                  bgcol +
-                  "' class='dlbtns btnDesign'>" +
-                  obj.formats[i].quality +
-                  myParam +
-                  "Download Video" +
-                  "</button></a>";
               }
-              // if (myParam == " - 18") {
-              //   bgcol = "green";
-              // }
-              // if (myParam == " - 22") {
-              //   bgcol = "green";
-              // }
-              if (
-                myParam == " - 17" ||
-                myParam == " - 139" ||
-                myParam == " - 140" ||
-                myParam == " - 141" ||
-                myParam == " - 249" ||
-                myParam == " - 250" ||
-                myParam == " - 251" ||
-                myParam == " - 599" ||
-                myParam == " - 600"
-              ) {
-                bgcol = "#1269ff";
-                downloadV.innerHTML +=
-                  "<a href='" +
-                  obj.formats[i].url +
-                  "'><button style='background:" +
-                  bgcol +
-                  "' class='dlbtns btnDesign'>" +
-                  obj.formats[i].quality +
-                  myParam +
-                  "Download Audio" +
-                  "</button></a>";
+              if (myParam == " - 18") {
+                bgcol = "green";
               }
+              if (myParam == " - 22") {
+                bgcol = "green";
+              }
+              if (myParam == " - 139") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 140") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 141") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 249") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 250") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 251") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 599") {
+                bgcol = "#3800ff";
+              }
+              if (myParam == " - 600") {
+                bgcol = "#3800ff";
+              }
+              downloadV.innerHTML +=
+                "<a href='" +
+                obj.medias[i].url +
+                "'><button style='background:" +
+                bgcol +
+                "' class='dlbtns btnDesign'>" +
+                obj.medias[i].quality +
+                myParam +
+                "Download Video" +
+                "</button></a>";
             }
           } else {
             alert("2 -Server Down due to Too Many Requests");
