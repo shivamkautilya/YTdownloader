@@ -13,7 +13,6 @@ let downloadBtn = document.getElementById("downloadBtn");
 downloadBtn.addEventListener("click", () => {
   //Loading
   document.getElementById("loadingContent").style = "display:initial";
-  const cors = "https://corsvkr.up.railway.app/";
   var myParamV = myurl.value;
   function getParameterByName(name, url) {
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -238,8 +237,6 @@ downloadBtn.addEventListener("click", () => {
           } else {
             alert("2 -Server Down due to Too Many Requests");
             document.getElementById("container").style = "display:none";
-            location.href =
-              "http://vkrfork.ml/data/download.php?vkr=" + myParam;
           }
         }
       },
