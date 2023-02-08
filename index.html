@@ -73,9 +73,10 @@
           </form>
         </div> -->
         <!-- new form for download link - BETA  -->
+        <form id="formInput">
         <div id="form" class="url--box">
-          <input id="inputUrl" type="url" placeholder="Enter YouTube video link" class="url--input">
-          <input id="downloadBtn" onclick="openbox()" type="submit" value="Download" class="url--button">
+          <input id="inputUrl" type="url" placeholder="Enter YouTube video link" class="url--input" autocomplete="off" required />
+          <input id="downloadBtn" type="submit" onclick="openbox()"  value="Download" class="url--button" />
        </div>
        <div class="loading" id="loadingContent">
         <p class="paragraph loading-para">Loading, Please Wait...<br />Green Button = Video + Audio | Blue Button = Only Audio | White Button = Video Only (mute)</p>
@@ -83,7 +84,7 @@
        <div class="loading" id="loadingText">
         <p class="paragraph loading-para">Loading, Please Wait...<br />Green Button = Video + Audio | Blue Button = Only Audio | White Button = Video Only (mute)</p>
        </div>
-       
+       </form>
      <!--  -->
      <!-- <div id="form">
       <input id="inputUrl" type="url" placeholder="Enter URL">
@@ -187,6 +188,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <!-- icon link  -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

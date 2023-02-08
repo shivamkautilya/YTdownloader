@@ -1,11 +1,13 @@
 //Loading
-function openbox() {
+function openbox(e) {
+  e.preventDefault();
   document.getElementById("loadingText").style.visibility = "visible";
   // let container = document.getElementById("container");
   let loading = document.getElementById("loadingContent");
   console.log("click");
   loading.style = "display:visible";
 }
+$("#formInput").submit(openbox);
 let myurl = document.getElementById("inputUrl");
 let downloadBtn = document.getElementById("downloadBtn");
 downloadBtn.addEventListener("click", () => {
