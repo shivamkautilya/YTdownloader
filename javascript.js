@@ -81,9 +81,9 @@ downloadBtn.addEventListener("click", () => {
           }
           if (vidDescription) {
             descriptionV.innerHTML =
-              "<h3><details> <summary>View Description</summary>" +
+              "<h6><details> <summary>View Description</summary>" +
               vidDescription +
-              "</details></h3>";
+              "</details></h6>";
           }
           if (vidUploader) {
             uploaderV.innerHTML = "<h5>" + vidUploader + "</h5>";
