@@ -34,15 +34,16 @@ downloadBtn.addEventListener("click", () => {
       success: function (data) {
         const obj = data;
         document.getElementById("container").style = "display:block";
-        document.getElementById("loadingContent").style = "display:none";
+        document.getElementById("loadingText").style.visibility = "hidden";
 
         // Define
 
         if (!$.trim(data)) {
           alert("1 - Unable To Get Download Link Please Check URL");
-          document.getElementById("loadingContent").style = "display:none";
+          document.getElementById("loadingText").style.visibility = "hidden";
+          document.getElementById("formInput").reset();
         } else {
-          document.getElementById("loadingContent").style = "display:none";
+          document.getElementById("loadingText").style.visibility = "hidden";
           let vidTitle = obj.title;
           let vidId = obj.id;
           let vidThumb = obj.thumbnail;
@@ -144,7 +145,7 @@ downloadBtn.addEventListener("click", () => {
                 downloadV.innerHTML +=
                   "<a href='" +
                   obj.formats[i].url +
-                  "'><button style='background:" +
+                  '\' target="_blank" rel="noopener noreferrer" ><button style=\'background:' +
                   bgcol +
                   "' class='dlbtns btnDesign'>" +
                   " 360p Download Video" +
@@ -155,7 +156,7 @@ downloadBtn.addEventListener("click", () => {
                 downloadV.innerHTML +=
                   "<a href='" +
                   obj.formats[i].url +
-                  "'><button style='background:" +
+                  '\' target="_blank" rel="noopener noreferrer" ><button style=\'background:' +
                   bgcol +
                   "' class='dlbtns btnDesign'>" +
                   " 720p Download Video" +
@@ -176,7 +177,7 @@ downloadBtn.addEventListener("click", () => {
                 downloadV.innerHTML +=
                   "<a href='" +
                   obj.formats[i].url +
-                  "'><button style='background:" +
+                  '\' target="_blank" rel="noopener noreferrer" ><button style=\'background:' +
                   bgcol +
                   "' class='dlbtns btnDesign'>" +
                   obj.formats[i].quality +
@@ -196,7 +197,7 @@ downloadBtn.addEventListener("click", () => {
                 downloadV.innerHTML +=
                   "<a href='" +
                   obj.formats[i].url +
-                  "'><button style='background:" +
+                  '\' target="_blank" rel="noopener noreferrer" ><button style=\'background:' +
                   bgcol +
                   "' class='dlbtns btnDesign'>" +
                   obj.formats[i].quality +
@@ -225,7 +226,7 @@ downloadBtn.addEventListener("click", () => {
                 downloadV.innerHTML +=
                   "<a href='" +
                   obj.formats[i].url +
-                  "'><button style='background:" +
+                  '\' target="_blank" rel="noopener noreferrer" ><button style=\'background:' +
                   bgcol +
                   "' class='dlbtns btnDesign'>" +
                   obj.formats[i].quality +
@@ -237,6 +238,7 @@ downloadBtn.addEventListener("click", () => {
           } else {
             alert("2 -Server Down due to Too Many Requests");
             document.getElementById("container").style = "display:none";
+            document.getElementById("formInput").reset();
           }
         }
       },
